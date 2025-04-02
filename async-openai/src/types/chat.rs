@@ -888,7 +888,7 @@ pub struct CreateChatCompletionResponse {
     /// The Unix timestamp (in seconds) of when the chat completion was created.
     pub created: u32,
     /// The model used for the chat completion.
-    pub model: String,
+    pub model: Option<String>,
     /// The service tier used for processing the request. This field is only included if the `service_tier` parameter is specified in the request.
     pub service_tier: Option<ServiceTierResponse>,
     /// This fingerprint represents the backend configuration that the model runs with.
@@ -897,7 +897,7 @@ pub struct CreateChatCompletionResponse {
     pub system_fingerprint: Option<String>,
 
     /// The object type, which is always `chat.completion`.
-    pub object: String,
+    pub object: Option<String>,
     pub usage: Option<CompletionUsage>,
 }
 
